@@ -1,3 +1,5 @@
+# Problem 6
+
 def sum(num, product):
 	while num > 1:
 		product = product + num
