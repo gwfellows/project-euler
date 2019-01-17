@@ -22,6 +22,7 @@ y2 = 0
 counterindex = 0
 #print (values)
 
+
 def find_value(x, y, values):
 	for key, value in values.items():
 		if value[1] == x and value[2] == y:
@@ -41,7 +42,7 @@ def find_y(mykey, values):
 			return result
 
 def add_to_sums(values):
-	sums = list()		
+	sums = list()	
 	for key, value in values.items():	
 		if value[1] <= 16:
 			#across right
@@ -51,6 +52,7 @@ def add_to_sums(values):
 			while x < 5 and y < 5:
 				sum = sum * find_value (x, y, values)
 				x += 1
+			if sum != 1:
 				sums.append(sum)
 
 		if value[2] <= 16:	
@@ -62,6 +64,7 @@ def add_to_sums(values):
 				sum = sum * (find_value(x, y, values))
 				y += 1
 				#print (y)
+			if sum != 1:
 				sums.append(sum)
 
 		if value[2] <= 16 and value[1] <= 16: 	
@@ -73,6 +76,7 @@ def add_to_sums(values):
 				sum = sum * (find_value(x, y, values))
 				x += 1
 				y +=1
+			if sum != 1:
 				sums.append(sum)
 
 		if value[2] >= 4 and value[1] >= 4: 
@@ -82,12 +86,10 @@ def add_to_sums(values):
 			y = find_y(key, values)
 			while (x < 5 and x > 0) and (y < 5 and y > 0):
 				testsum = find_value(x, y, values)
-				print ("x = "+str(x))
-				print (y)
-				print (testsum)
 				sum = sum * testsum
 				x -= 1
 				y -= 1
+			if sum != 1:
 				sums.append(sum)
 	return sums
 
@@ -95,4 +97,5 @@ def add_to_sums(values):
 sums = add_to_sums(values)
 
 sums.sort()
+print(len(sums))
 print (sums)
