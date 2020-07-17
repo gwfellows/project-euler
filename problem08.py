@@ -29,4 +29,4 @@ while sets < 987:
 #print (hugelist[1])
 
 newsumlist.sort()
-print(newsumlist)
+print(newsumlist[-1])
