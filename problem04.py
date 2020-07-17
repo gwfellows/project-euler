@@ -18,19 +18,14 @@ palindromes = list()
 #palindromes.append("hi")
 
 while b >= 100:
-
 	while a >= 100:
 		s = str(a * b)
-		print(s)
+		#print(s)
 		s2 = reverse(s)
-		print(s2)
-
+		#print(s2)
 		if s == s2:
-			print("palindrome")
+			#print("palindrome")
 			palindromes.append(int(s))
-		else:
-			print("not a palindrome")
-
 		a = a - 1
 
  	
@@ -39,4 +34,4 @@ while b >= 100:
 
 
 palindromes.sort()
-print (palindromes)
+print (palindromes[-1])
