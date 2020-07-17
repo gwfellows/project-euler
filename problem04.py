@@ -15,8 +15,6 @@ def reverse(s):
 
 palindromes = list()
 
-#palindromes.append("hi")
-
 while b >= 100:
 	while a >= 100:
 		s = str(a * b)
