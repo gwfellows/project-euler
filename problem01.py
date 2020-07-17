@@ -29,11 +29,11 @@ while (mult3 < 1000):
 	if mult5 < 1000 and checkduplicates(mult5, multiplelist) == False:
 		multiplelist.append(mult5)
 	
-	print ("Counter: " + str(i) + " mult3: " + str(mult3) + " mult5: " + str(mult5))
+	#print ("Counter: " + str(i) + " mult3: " + str(mult3) + " mult5: " + str(mult5))
 	
 	i = i + 1
 
 for item in multiplelist:
 	multiplesum = multiplesum + item
 	
-print ("Multiple sum: " + str(multiplesum))
+print (multiplesum)
