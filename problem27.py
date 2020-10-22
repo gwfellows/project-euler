@@ -28,18 +28,18 @@ def is_prime(n):
             return False
     return prime
 
-#           a*b, n_primes  
-solution = [0,   0]
+solution = 0
+max_primes = 0
 
 for a in range(-1000,1000):
     for b in range(-1000,1000):
         n = 0
         while is_prime(n**2 + a*n + b):
             n += 1
-        if n > solution[1]:
-            print(a, b)
-            solution = [a*b, n]
+        if n > max_primes:
+            solution = a*b
+            max_primes = n
 
-print(solution[0])
+print(solution)
 
 
