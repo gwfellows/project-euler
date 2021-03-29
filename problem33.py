@@ -11,20 +11,13 @@ def canceldigits(numer, denom):
 
 import math
 
-fracs = set()
+final_numer, final_denom = 1, 1
 
 for numer in range(10, 99 + 1):
     for denom in range(numer + 1, 99 + 1):
         if canceldigits(numer, denom) == (numer / denom):
-            fracs.add((numer, denom))
+            final_numer *= numer
+            final_denom *= denom
 
-numer = 1
-denom = 1
-for frac in fracs:
-    numer *= frac[0]
-    denom *= frac[1]
-
-gcd = math.gcd(int(numer), int(denom))
-denom = denom // gcd
-
-print(denom)
+final_denom //= math.gcd(final_numer, final_denom)
+print(final_denom)
