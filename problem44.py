@@ -15,3 +15,4 @@ for i in permutations(pents, 2):
     if is_pent(a + b) and is_pent(a - b):
         D = abs(a - b)
         print(D)
+        break
